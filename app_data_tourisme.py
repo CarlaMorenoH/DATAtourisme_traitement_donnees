@@ -134,7 +134,7 @@ data_erreur_map = load_data_erreur_map()
 def get_table_download_link(df):
 	csv = data_erreur.to_csv(index=False)
 	b64 = base64.b64encode(csv.encode()).decode()  
-	href = f'<a href="data:file/csv;base64,{b64}">Download csv file</a>'	
+	href = f'<a href="data:file/csv;base64,{b64}" download="myfilename.csv" >Download csv file</a>'	
 
 
 
