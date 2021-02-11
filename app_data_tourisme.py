@@ -99,7 +99,8 @@ local_css("style1.css")
 
 @st.cache
 def load_data_erreur(allow_output_mutation=True):
-    data5 = pd.concat([data1,data2,data3,data4]).to_frame()
+    data5 = pd.concat([data1,data2,data3,data4])
+    data5.to_frame()
     e_lat_lon = (data5[(data5.latitude.round(4) > 52)|(data5.latitude.round(4) < 41)|(data5.longitude.round(4) >10)|(data5.longitude.round(4) <-6)])
     e_lat_lon["t_pb"] = "lat_lon"
     e_lat_lon['len_dpt'] = e_lat_lon.code_departement.astype(str).apply(len)
