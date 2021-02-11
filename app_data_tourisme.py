@@ -553,8 +553,7 @@ def main():
 				if download:
 					csv = data_erreur.to_csv(index=False)
 					b64 = base64.b64encode(csv.encode()).decode()  
-					linko= f'<a href="data:file/csv;base64,{b64}" >Download Table</a> #download="data_erreur.csv">Download csv file</a>'
-					result_column[pos_dl_table] = pn.pane.HTML(href)
+					linko= f'<a href="data:file/csv;base64,{b64}" download="data_erreur.csv">Download csv file</a>'
 					st.markdown(linko, unsafe_allow_html=True)
 				
 				 	
