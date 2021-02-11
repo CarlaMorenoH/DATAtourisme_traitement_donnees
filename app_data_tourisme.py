@@ -574,7 +574,7 @@ def main():
 				if download:
 					csv = data_erreur.to_csv(index=False)
 					b64 = base64.b64encode(csv.encode()).decode()  
-					linko= f'<a href="data:file/csv;base64,{b64}" download="data_erreur.csv">Download csv file</a>'
+					linko= f'<a href="data:file/csv;base64,{csv}" download="data_erreur.csv">Download csv file</a>'
 					st.markdown(linko, unsafe_allow_html=True)
 				 	
 
