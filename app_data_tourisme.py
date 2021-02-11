@@ -530,8 +530,16 @@ def main():
 
 		fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 		st.plotly_chart(fig)
+		csv = data4.to_csv(sep=" ", index=False)
+		b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
+		href = f'<a href="data:file/csv;base64,{b64}">Download Table</a> (right-click and save as &lt;some_name&gt;.txt)'
+		result_column[pos_dl_table] = pn.pane.HTML(href)
+
 		
-	
+
+				
+
+			
 		image = Image.open('WCS.png')
 		st.image(image, use_column_width = True, output_format = 'PNG')
 
@@ -545,7 +553,7 @@ def main():
 
 
 		st.write()
-		if mdp == "Les+tour1stes.":
+		if mdp == "bonjour":
 			if st.checkbox('voir dataframe'):
 				st.write(data_erreur)
 				st.markdown("")
@@ -555,7 +563,6 @@ def main():
 					b64 = base64.b64encode(csv.encode()).decode()  
 					linko= f'<a href="data:file/csv;base64,{b64}" download="data_erreur.csv">Download csv file</a>'
 					st.markdown(linko, unsafe_allow_html=True)
-				
 				 	
 
 			f" Départements sans fournisseurs : **{data_erreur[data_erreur.fournisseur.isna()].code_departement.unique()}**"
