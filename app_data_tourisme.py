@@ -277,7 +277,7 @@ def main():
 		   st.write(data.iloc[0:100,:])
 		   download = st.button('télécharger')
 		   if download:
-		   	csv = data1.to_csv(index=False, compression="zip")
+		   	csv = "df_produit.zip"
 		   	b64 = base64.b64encode(csv.encode()).decode()  
 		   	linko= f'<a href="data:file/csv;base64,{b64}" download="data_produit.zip">Download csv file</a>'
 		   	st.markdown(linko, unsafe_allow_html=True)
