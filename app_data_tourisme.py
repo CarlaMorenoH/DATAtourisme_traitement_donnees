@@ -530,15 +530,11 @@ def main():
 
 		fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 		st.plotly_chart(fig)
-		csv = data4.to_csv(sep=" ", index=False)
-		b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
-		href = f'<a href="data:file/csv;base64,{b64}">Download Table</a> (right-click and save as &lt;some_name&gt;.txt)'
-		result_column[pos_dl_table] = pn.pane.HTML(href)
+	
 
 		
 
-				
-
+			
 			
 		image = Image.open('WCS.png')
 		st.image(image, use_column_width = True, output_format = 'PNG')
