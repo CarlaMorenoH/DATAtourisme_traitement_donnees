@@ -26,7 +26,7 @@ france_regions_geo = dept_geo()
 @st.cache
 def load_data():
     data1 = pd.read_csv('df_produit.zip', sep=' ', dtype={"code_departement":"str"}, error_bad_lines=False, low_memory = False)
-    data1 = data1[['poi','categorie_mere','sous_categorie', 'code_departement','latitude','longitude', 'photo','ville','createur_donnée','fournisseur']]
+    #data1 = data1[['poi','categorie_mere','sous_categorie', 'code_departement','latitude','longitude', 'photo','ville','createur_donnée','fournisseur']]
     data1 = data1.rename(columns={'categorie_mere':'categorie'})
     lowercase = lambda x: str(x).lower()
     data1.rename(lowercase, axis='columns', inplace=True)
@@ -43,7 +43,7 @@ data1 = load_data()
 @st.cache
 def load_data():
     data2 = pd.read_csv('df_fete.zip', sep=' ', dtype={"code_departement":"str"}, error_bad_lines=False, low_memory = False)
-    data2 = data2[['poi','categorie_mere','sous_categorie','code_departement','region','latitude','longitude','photo','ville','createur_donnée','fournisseur']]
+    #data2 = data2[['poi','categorie_mere','sous_categorie','code_departement','region','latitude','longitude','photo','ville','createur_donnée','fournisseur']]
     data2 = data2.rename(columns={'categorie_mere':'categorie'})
     lowercase = lambda x: str(x).lower()
     data2.rename(lowercase, axis='columns', inplace=True)
@@ -60,7 +60,7 @@ data2 = load_data()
 @st.cache
 def load_data():
     data3 = pd.read_csv('df_lieu.zip', sep=' ', dtype={"code_departement":"str"}, error_bad_lines=False, low_memory = False)
-    data3 = data3[['poi','categorie_mere','sous_categorie','code_departement','region','latitude','longitude','photo','ville','createur_donnée','fournisseur']]
+    #data3 = data3[['poi','categorie_mere','sous_categorie','code_departement','region','latitude','longitude','photo','ville','createur_donnée','fournisseur']]
     data3 = data3.rename(columns={'categorie_mere':'categorie'})
     lowercase = lambda x: str(x).lower()
     data3.rename(lowercase, axis='columns', inplace=True)
@@ -77,7 +77,7 @@ data3 = load_data()
 @st.cache
 def load_data():
     data4 = pd.read_csv('df_it.zip', sep=' ', dtype={"code_departement":"str"}, error_bad_lines=False, low_memory = False)
-    data4 = data4[['poi','categorie_mere','sous_categorie','code_departement','region','latitude','longitude','photo','ville','createur_donnée','fournisseur']]
+    #data4 = data4[['poi','categorie_mere','sous_categorie','code_departement','region','latitude','longitude','photo','ville','createur_donnée','fournisseur']]
     data4 = data4.rename(columns={'categorie_mere':'categorie'})
     lowercase = lambda x: str(x).lower()
     data4.rename(lowercase, axis='columns', inplace=True)
