@@ -201,7 +201,7 @@ def main():
    		   st.markdown("")
 
 		with col2:
-			st.markdown("La page « À propos » ou « Qui sommes-nous » est celle qui vous révèle à vos visiteurs. Plus qu'une simple page d'information sur le dirigeant ou l'équipe, elle transmet les valeurs de votre entreprise. Et elle peut influencer l'acte d'achat !", unsafe_allow_html=True)   
+			st.markdown("A propos de ce projet : Dans le cadre de notre formation professionnelle de Data Analyst, notre équipe de 5 s'est alliée à ADN Tourisme pour proposer un état des lieux, à jour, du projet DATAtourisme, ce qui n'existait pas jusqu'alors.", unsafe_allow_html=True)   
 
 		with col3:
 			st.markdown("")   		   
